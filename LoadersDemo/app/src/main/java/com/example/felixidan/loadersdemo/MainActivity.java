@@ -54,4 +54,15 @@ public class MainActivity extends ActionBarActivity {
     public void goToActivityWithFragmentsAndLoaders(View view) {
 
     }
+
+    public void goToCursorLoader(View view) {
+        goToActivity(SimpleCursorLoaderActivity.class);
+    }
+
+    public void goToCursorLoaderWithRestart(View view) {
+    }
+
+    public void goToAsyncTaskLoaderLifecycle(View view) {
+        goToActivity(AsyncTaskLoaderLifecycleActivity.class);
+    }
 }

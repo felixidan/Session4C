@@ -10,8 +10,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
-public class ActivityWithLoadersActivity extends ActionBarActivity 
-                                         implements LoaderManager.LoaderCallbacks<Long>{
+public class AsyncTaskLoaderLifecycleActivity extends ActionBarActivity
+                                              implements LoaderManager.LoaderCallbacks<Long>{
 
     private static final int LOADER_ID = 31415;
 
@@ -22,9 +22,9 @@ public class ActivityWithLoadersActivity extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity_with_loaders);
+        setContentView(R.layout.activity_async_task_loader_lifecycle);
 
-        resultView = (TextView)findViewById(R.id.with_loaderResult);
+        resultView = (TextView)findViewById(R.id.lifecycle_loaderResult);
 
         getLoaderManager().initLoader(LOADER_ID, null, this);
 
@@ -36,7 +36,7 @@ public class ActivityWithLoadersActivity extends ActionBarActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_activity_with_loaders, menu);
+        getMenuInflater().inflate(R.menu.menu_async_task_loader_lifecycle, menu);
         return true;
     }
 
@@ -52,7 +52,7 @@ public class ActivityWithLoadersActivity extends ActionBarActivity
 
     @Override
     public Loader<Long> onCreateLoader(int id, Bundle args) {
-        return new DemoLoader(this);
+        return new LoggingDemoLoader(this);
     }
 
     @Override
@@ -66,4 +66,5 @@ public class ActivityWithLoadersActivity extends ActionBarActivity
     public void onLoaderReset(Loader<Long> loader) {
         // Nothing to do
     }
+
 }

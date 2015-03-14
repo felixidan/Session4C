@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.felixidan.loadersdemo" >
 
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -23,6 +25,14 @@
         <activity
             android:name=".ActivityWithLoadersActivity"
             android:label="@string/title_activity_activity_with_loaders" >
+        </activity>
+        <activity
+            android:name=".SimpleCursorLoaderActivity"
+            android:label="@string/title_activity_simple_cursor_loader" >
+        </activity>
+        <activity
+            android:name=".AsyncTaskLoaderLifecycleActivity"
+            android:label="@string/title_activity_async_task_loader_lifecycle" >
         </activity>
     </application>
 
