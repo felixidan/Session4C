@@ -3,6 +3,7 @@
     package="com.example.felixidan.loadersdemo" >
 
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +34,10 @@
         <activity
             android:name=".AsyncTaskLoaderLifecycleActivity"
             android:label="@string/title_activity_async_task_loader_lifecycle" >
+        </activity>
+        <activity
+            android:name=".AddToUserDictonaryActivity"
+            android:label="@string/title_activity_add_to_user_dictonary" >
         </activity>
     </application>
 

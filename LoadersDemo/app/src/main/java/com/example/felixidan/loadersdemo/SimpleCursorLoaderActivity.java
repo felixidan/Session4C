@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.provider.UserDictionary;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CursorAdapter;
@@ -27,8 +28,11 @@ public class SimpleCursorLoaderActivity extends ActionBarActivity
         setContentView(R.layout.activity_simple_cursor_loader);
 
         resultsView = (ListView)findViewById(R.id.simplecursor_listview);
-        adapter = new WordsAdapter(this, null, 0);
+        adapter = new WordsAdapter(this, null,0);
 
+        getLoaderManager().initLoader(WORDS_LOADER_ID, new Bundle(), this);
+
+        resultsView.setAdapter(adapter);
     }
 
 
@@ -57,16 +61,18 @@ public class SimpleCursorLoaderActivity extends ActionBarActivity
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         return new CursorLoader(this, // Context
-                                UserDictionary.CONTENT_URI,  // Content Provider Content URI
+                                UserDictionary.Words.CONTENT_URI,  // Content Provider Content URI
                                 null,
                                 null,
                                 null,
-                                UserDictionary.Words.FREQUENCY + " DEC");
+                                null);
     }
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+        Log.e("IDAN", data.getCount() + "");
         adapter.swapCursor(data);
+        adapter.notifyDataSetChanged();
     }
 
     @Override

@@ -65,4 +65,8 @@ public class MainActivity extends ActionBarActivity {
     public void goToAsyncTaskLoaderLifecycle(View view) {
         goToActivity(AsyncTaskLoaderLifecycleActivity.class);
     }
+
+    public void goToAddWordsToDictionary(View view) {
+        goToActivity(AddToUserDictonaryActivity.class);
+    }
 }

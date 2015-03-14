@@ -43,6 +43,12 @@
         android:text="CursorLoader w/ restart"
         android:onClick="goToCursorLoaderWithRestart"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Words"
+        android:onClick="goToAddWordsToDictionary"
+        />
 
     <Button
         android:layout_width="match_parent"
