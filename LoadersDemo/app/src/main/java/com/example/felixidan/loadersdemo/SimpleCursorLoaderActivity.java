@@ -30,9 +30,9 @@ public class SimpleCursorLoaderActivity extends ActionBarActivity
         resultsView = (ListView)findViewById(R.id.simplecursor_listview);
         adapter = new WordsAdapter(this, null,0);
 
-        getLoaderManager().initLoader(WORDS_LOADER_ID, new Bundle(), this);
-
         resultsView.setAdapter(adapter);
+
+        getLoaderManager().initLoader(WORDS_LOADER_ID, null, this);
     }
 
 
@@ -70,9 +70,7 @@ public class SimpleCursorLoaderActivity extends ActionBarActivity
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        Log.e("IDAN", data.getCount() + "");
         adapter.swapCursor(data);
-        adapter.notifyDataSetChanged();
     }
 
     @Override

@@ -39,6 +39,14 @@
             android:name=".AddToUserDictonaryActivity"
             android:label="@string/title_activity_add_to_user_dictonary" >
         </activity>
+        <activity
+            android:name=".FragmentsActivityWithLoadersActivity"
+            android:label="@string/title_activity_fragments_activity_with_loaders" >
+        </activity>
+        <activity
+            android:name=".ActivityWithMultipleLoadersActivity"
+            android:label="@string/title_activity_activity_with_multiple_loaders" >
+        </activity>
     </application>
 
 </manifest>

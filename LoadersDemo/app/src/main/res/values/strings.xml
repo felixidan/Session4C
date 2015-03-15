@@ -9,5 +9,7 @@
     <string name="title_activity_simple_cursor_loader">SimpleCursorLoaderActivity</string>
     <string name="title_activity_async_task_loader_lifecycle">AsyncTaskLoaderLifecycleActivity</string>
     <string name="title_activity_add_to_user_dictonary">AddToUserDictonaryActivity</string>
+    <string name="title_activity_fragments_activity_with_loaders">FragmentsActivityWithLoadersActivity</string>
+    <string name="title_activity_activity_with_multiple_loaders">ActivityWithMultipleLoadersActivity</string>
 
 </resources>

@@ -35,6 +35,6 @@ public class WordsAdapter extends CursorAdapter {
         line1.setText(word);
 
         TextView line2 = (TextView)view.findViewById(android.R.id.text2);
-        line1.setText(frequency + "");
+        line2.setText(frequency + "");
     }
 }

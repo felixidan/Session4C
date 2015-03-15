@@ -48,11 +48,11 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void goToActivityWithMultipleLoaders(View view) {
-
+        goToActivity(ActivityWithMultipleLoadersActivity.class);
     }
 
     public void goToActivityWithFragmentsAndLoaders(View view) {
-
+        goToActivity(FragmentsActivityWithLoadersActivity.class);
     }
 
     public void goToCursorLoader(View view) {
