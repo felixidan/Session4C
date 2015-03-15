@@ -19,30 +19,14 @@
         android:text="Activity w/ Loaders"
         android:onClick="goToActivityWithLoaders"
         />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Activity w/ multiple Loaders"
-        android:onClick="goToActivityWithMultipleLoaders"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fragment with loaders"
-        android:onClick="goToActivityWithFragmentsAndLoaders"
-        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CursorLoader"
         android:onClick="goToCursorLoader"
         />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CursorLoader w/ restart"
-        android:onClick="goToCursorLoaderWithRestart"
-        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
