@@ -9,7 +9,6 @@ import android.os.SystemClock;
  */
 public class DemoLoader extends AsyncTaskLoader<Long> {
     private Long mData;
-    private DemoObserver mObserver;
 
     public DemoLoader(Context context) {
         super(context);
@@ -53,10 +52,7 @@ public class DemoLoader extends AsyncTaskLoader<Long> {
         }
 
         // Begin monitoring the underlying data source.
-        if (mObserver == null) {
-            mObserver = new DemoObserver();
-            // TODO: register the observer
-        }
+        // TODO: register an observer
 
         if (takeContentChanged() || mData == null) {
             // When the observer detects a change, it should call onContentChanged()
@@ -90,10 +86,7 @@ public class DemoLoader extends AsyncTaskLoader<Long> {
         }
 
         // The Loader is being reset, so we should stop monitoring for changes.
-        if (mObserver != null) {
-            // TODO: unregister the observer
-            mObserver = null;
-        }
+        // TODO: unregister the observer
     }
 
     @Override
