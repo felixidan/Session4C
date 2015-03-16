@@ -26,10 +26,10 @@ public class ActivityWithLoadersActivity extends ActionBarActivity
 
         resultView = (TextView)findViewById(R.id.with_loaderResult);
 
-        getLoaderManager().initLoader(LOADER_ID, null, this);
-
         createTime = SystemClock.uptimeMillis();
         resultView.setText("0");
+
+        getLoaderManager().initLoader(LOADER_ID, null, this);
 
     }
 
